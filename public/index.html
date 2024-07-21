@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>SummariGenie</title>
+    <link rel="stylesheet" href="stylesheet.css">
+    <style>@import url('https://fonts.googleapis.com/css2?family=Benne&display=swap');</style>
+    <script type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+      (function(){
+      emailjs.init({
+        publicKey: "KSMWDjL-AUNbF98pa",
+      });
+      })();
+    </script>
+  </head>
+  <body>
+    <div class="home">
+      <h1>SummariGenie: Your Text Wizard!</h1>
+      <p> Welcome to SummariGenie, your ultimate text wizard! Our magical app harnesses the wizardry of Artificial Intelligence APIs to conjure up concise summaries of your lengthy texts. Whether it's a never-ending article, a scholarly research paper, or a fantastical tale, SummariGenie is here to lighten your load and unlock the secrets hidden within your words. </p>
+      <p> Simply wave your wand 🪄 (or rather, paste your text) into the enchanted text area below and watch as the magic unfolds with a tap of the "Summarus Revelio" button.<br/>Let the adventure begin! ✨🚀 </p>
+    </div>
+    <div class="container">
+      <div class="text-box">
+        <textarea id="text_to_summarize" name="text_to_summarize" placeholder="Type/Paste in some text to summarize. (Min length is 200 chars. Max length is 100,000 chars.)" maxlength="100000"></textarea>
+        <a href="#" id="paste-sample-text" class="paste-link">Paste Sample Text</a>
+        <button id="submit-button" class="submit-button" >
+          <span class="submit-button-text"><img src="images/wand.png" alt=""> Summarus Revelio</span>
+        </button>
+      </div>
+      <div class="text-box"> 
+      <textarea id="summary" name="summarized_text" placeholder="Summarized text will appear here"> </textarea>
+      <button id="copy-text" class="submit-button" >
+        <span class="submit-button-text">Copy to Clipboard</span>
+      </button>
+      </div>
+    </div>
+    <section class="cta-section">
+      <div class="cta-content">
+        <div class="cta-text">
+          <h2>Hey Everyone</h2>
+          <p>Thank you for visiting our page!<br>Your thoughts and feedback are valuable to us. Please take a moment to share your thoughts in the 'Share Your Thoughts' section. If you'd like your feedback to be shared publicly, please check the box provided. Your magic makes us magical!</p>
+          <p>Design & Developed by <b>Jayaprakash Elango</b></p>
+          <p>Follow us on ⬇️</p>
+          <div class="cta-icons">
+            <a href="https://www.linkedin.com/in/jayaprakash-elango" target="_blank" class="social-icon"><img src="images/linkedin.png" alt="linkedin"></a>
+            <a href="https://github.com/JAYAPRAKASH0001" target="_blank" class="social-icon"><img src="images/github.png" alt=""></a>
+            <a href="mailto:jpjayaprakash6604@gmail.com" target="_blank" class="social-icon"><img src="images/gmail.png" alt=""></a>
+          </div>
+        </div>
+        <div class="cta-form">
+          <form>
+            <div class="form-title"><h2>Share Your Thoughts</h2></div>
+            <input type="text" name="name" id="name" placeholder="Your Name" class="cta-inputs" required />
+            <input type="email" name="email" id="email" placeholder="Your Email" class="cta-inputs" required />
+            <textarea name="message" id="message" placeholder="Your Message" class="cta-inputs" required></textarea>
+            <div class="cta-check">
+              <input type="checkbox" name="share-feedback" id="share-feedback">
+              <label for="share-feedback">Share my Feedback (publicly)</label>
+            </div>
+            <button type="submit" onClick="sendEmail()"><img src="images/owl.png" alt=""> Submit</button>
+          </form>
+        </div>
+      </div>
+    </section>
+    <script src="script.js"></script>
+  </body>
+</html>
